@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GYGO Portal - Sostenibilidad B2B</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f7f6; margin: 0; padding: 20px; display: flex; justify-content: center; align-items: center; height: 100vh; }
+        .card { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); width: 100%; max-width: 400px; text-align: center; }
+        h1 { color: #2c3e50; font-size: 24px; margin-bottom: 5px; }
+        p { color: #7f8c8d; margin-top: 0; }
+        input { width: 100%; padding: 10px; margin: 8px 0; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        button { background: #27ae60; color: white; border: none; padding: 10px; border-radius: 4px; cursor: pointer; font-size: 16px; width: 100%; margin-top: 10px; }
+        button:hover { background: #219653; }
+        .google-btn { background: #4285F4; }
+        .google-btn:hover { background: #357ae8; }
+        #status { margin-top: 15px; font-weight: bold; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>GYGO Portal</h1>
+        <p>Ecosistema B2B de Sostenibilidad</p>
+        
+        <!-- Formulario de Acceso -->
+        <div id="auth-section">
+            <input type="email" id="email" placeholder="Correo electrónico">
+            <input type="password" id="password" placeholder="Contraseña">
+            <button id="login-email-btn">Iniciar Sesión con Correo</button>
+            <button id="login-google-btn" class="google-btn">Acceder con Google</button>
+        </div>
+
+        <!-- Panel oculto al iniciar sesión -->
+        <div id="dashboard-section" style="display:none;">
+            <p id="user-welcome" style="color: #27ae60; font-weight: bold;"></p>
+            <button id="logout-btn" style="background: #e74c3c;">Cerrar Sesión</button>
+        </div>
+
+        <div id="status">Conectando con Firebase...</div>
+    </div>
+
+    <!-- Firebase SDKs -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+        import { getFirestore } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+        
+        const firebaseConfig = {
+            apiKey: "AIzaSyDLXFbhbPk68-mLqueVxgMuqfGbXgufnoc",
+            authDomain: "gygo-portal.firebaseapp.com",
+            projectId: "gygo-portal",
+            storageBucket: "gygo-portal.firebasestorage.app",
+            messagingSenderId: "285339830450",
+            appId: "1:285339830450:web:6d104d1ee07d26692b21ab"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+        const googleProvider = new GoogleAuthProvider();
+
+        document.getElementById("status").innerText = "¡Conectado a Firebase exitosamente!";
+        document.getElementById("status").style.color = "#27ae60";
+
+        // Evento: Iniciar sesión con Correo y Contraseña
+        document.getElementById("login-email-btn").addEventListener("click", () => {
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            signInWithEmailAndPassword(auth, email, password)
+                .catch((error) => {
+                    document.getElementById("status").innerText = "Error: " + error.message;
+                    document.getElementById("status").style.color = "#e74c3c";
+                });
+        });
+
+        // Evento: Iniciar sesión con Google
+        document.getElementById("login-google-btn").addEventListener("click", () => {
+            signInWithPopup(auth, googleProvider)
+                .catch((error) => {
+                    document.getElementById("status").innerText = "Error Google: " + error.message;
+                    document.getElementById("status").style.color = "#e74c3c";
+                });
+        });
+
+        // Evento: Cerrar Sesión
+        document.getElementById("logout-btn").addEventListener("click", () => {
+            signOut(auth);
+        });
+
+        // Monitorear estado de sesión del usuario
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                document.getElementById("auth-section").style.display = "none";
+                document.getElementById("dashboard-section").style.display = "block";
+                document.getElementById("user-welcome").innerText = "Bienvenido, " + user.email;
+                document.getElementById("status").innerText = "Sesión activa";
+            } else {
+                document.getElementById("auth-section").style.display = "block";
+                document.getElementById("dashboard-section").style.display = "none";
+                document.getElementById("status").innerText = "Por favor inicia sesión";
+                document.getElementById("status").style.color = "#7f8c8d";
+            }
+        });
+    </script>
+</body>
+</html>
