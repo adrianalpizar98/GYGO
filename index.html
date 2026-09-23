@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get your Green On | Sostenibilidad y Estrategia de Negocios</title>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { editorial: ['Newsreader', 'Georgia', 'serif'] },
+                    colors: { consulting: { dark: '#0F2D24', muted: '#526E65', light: '#FDFDFC', card: '#F8F9F8', border: '#E2E8F0' } }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-consulting-light text-slate-800 antialiased selection:bg-consulting-dark selection:text-white">
+
+    <header class="sticky top-0 z-50 bg-consulting-light/90 backdrop-blur-md border-b border-consulting-border">
+        <div class="max-w-7xl mx-auto px-8 h-28 flex items-center justify-between">
+            <a href="index.html" class="flex items-center">
+                <img src="imgs/logoV.png" alt="Get your Green On" class="h-36 w-auto object-contain py-1">
+            </a>
+            <nav class="hidden md:flex items-center gap-10 text-xs uppercase tracking-widest font-semibold text-slate-600">
+                <a href="index.html" class="text-consulting-dark transition" data-i18n="nav_home">Home</a>
+                <a href="about.html" class="hover:text-consulting-dark transition" data-i18n="nav_about">About Us</a>
+                <a href="services.html" class="hover:text-consulting-dark transition" data-i18n="nav_solutions">Services</a>
+                <a href="contact.html" class="hover:text-consulting-dark transition" data-i18n="nav_contact">Contact</a>
+            </nav>
+            <div class="flex items-center gap-5">
+                <div class="flex items-center text-xs font-medium text-slate-500 border border-consulting-border rounded-full px-2 py-1 bg-white">
+                    <button id="btn-en" onclick="switchLanguage('en')" class="px-2.5 py-0.5 rounded-full bg-consulting-dark text-white transition">ENG</button>
+                    <button id="btn-es" onclick="switchLanguage('es')" class="px-2.5 py-0.5 rounded-full hover:text-consulting-dark transition">ES</button>
+                </div>
+                <a href="https://cal.com/tu-usuario/reunion-estrategica" target="_blank" rel="noopener" class="bg-consulting-dark text-white text-xs uppercase tracking-widest font-semibold px-6 py-3 rounded-full hover:bg-consulting-muted transition shadow-sm" data-i18n="nav_cta">
+                    Schedule a Conversation
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-10 md:py-16 px-6 max-w-5xl mx-auto text-center">
+        <h1 class="text-3xl md:text-5xl font-editorial font-light text-consulting-dark tracking-tight leading-[1.15] max-w-4xl mx-auto" data-i18n="hero_title">
+            From sustainability commitments to a resilient business strategy.
+        </h1>
+        <p class="mt-6 text-base md:text-lg text-slate-600 max-w-2xl mx-auto font-light leading-relaxed" data-i18n="hero_desc">
+            We help organizations assess climate and sustainability risks, define practical strategies, implement measurable actions, and prepare reliable disclosures.
+        </p>
+        <div class="mt-8 flex justify-center">
+            <a href="https://cal.com/tu-usuario/reunion-estrategica" target="_blank" rel="noopener" class="bg-consulting-dark text-white text-xs uppercase tracking-widest font-semibold px-8 py-3.5 rounded-full hover:bg-consulting-muted transition shadow-md" data-i18n="hero_cta">
+                Schedule a Conversation
+            </a>
+        </div>
+    </section>
+
+    <div class="max-w-7xl mx-auto px-8 mb-12">
+        <div class="rounded-3xl overflow-hidden border border-consulting-border shadow-sm h-[450px] md:h-[550px] bg-slate-200">
+            <img src="imgs/main.jpg" alt="Get your Green On Consultoría" class="w-full h-full object-cover editorial-img">
+        </div>
+    </div>
+
+    <section class="py-12 px-8 max-w-7xl mx-auto">
+        <div class="max-w-3xl mb-12">
+            <h2 class="text-3xl md:text-4xl font-editorial font-light text-consulting-dark tracking-tight leading-snug" data-i18n="stage_title">Support at every stage of your sustainability journey.</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <a href="services.html" class="bg-consulting-card p-10 border border-consulting-border rounded-3xl flex flex-col justify-between hover:border-consulting-dark transition group">
+                <div>
+                    <span class="text-xs font-mono text-consulting-muted block mb-6">01</span>
+                    <h3 class="text-xl font-editorial font-medium text-consulting-dark mb-3 group-hover:text-consulting-muted transition" data-i18n="st1_title">Assess Sustainability Impacts</h3>
+                    <p class="text-slate-600 text-sm font-light leading-relaxed" data-i18n="st1_desc">Understand impacts, risks, opportunities, governance, data, and value chain exposure.</p>
+                </div>
+                <div class="mt-8 text-xs font-semibold uppercase tracking-widest text-consulting-dark flex items-center gap-2">
+                    <span data-i18n="card_cta">View details</span> &rarr;
+                </div>
+            </a>
+            <a href="services.html" class="bg-consulting-card p-10 border border-consulting-border rounded-3xl flex flex-col justify-between hover:border-consulting-dark transition group">
+                <div>
+                    <span class="text-xs font-mono text-consulting-muted block mb-6">02</span>
+                    <h3 class="text-xl font-editorial font-medium text-consulting-dark mb-3 group-hover:text-consulting-muted transition" data-i18n="st2_title">Build Resilient Strategy</h3>
+                    <p class="text-slate-600 text-sm font-light leading-relaxed" data-i18n="st2_desc">Define priorities, climate resilience plans, sustainability strategies, targets, and roadmaps.</p>
+                </div>
+                <div class="mt-8 text-xs font-semibold uppercase tracking-widest text-consulting-dark flex items-center gap-2">
+                    <span data-i18n="card_cta">View details</span> &rarr;
+                </div>
+            </a>
+            <a href="services.html" class="bg-consulting-card p-10 border border-consulting-border rounded-3xl flex flex-col justify-between hover:border-consulting-dark transition group">
+                <div>
+                    <span class="text-xs font-mono text-consulting-muted block mb-6">03</span>
+                    <h3 class="text-xl font-editorial font-medium text-consulting-dark mb-3 group-hover:text-consulting-muted transition" data-i18n="st3_title">Drive Meaningful Action</h3>
+                    <p class="text-slate-600 text-sm font-light leading-relaxed" data-i18n="st3_desc">Implement environmental programs, decarbonization initiatives, stakeholder engagement, and certifications.</p>
+                </div>
+                <div class="mt-8 text-xs font-semibold uppercase tracking-widest text-consulting-dark flex items-center gap-2">
+                    <span data-i18n="card_cta">View details</span> &rarr;
+                </div>
+            </a>
+            <a href="services.html" class="bg-consulting-card p-10 border border-consulting-border rounded-3xl flex flex-col justify-between hover:border-consulting-dark transition group">
+                <div>
+                    <span class="text-xs font-mono text-consulting-muted block mb-6">04</span>
+                    <h3 class="text-xl font-editorial font-medium text-consulting-dark mb-3 group-hover:text-consulting-muted transition" data-i18n="st4_title">Prepare Reliable Disclosures</h3>
+                    <p class="text-slate-600 text-sm font-light leading-relaxed" data-i18n="st4_desc">Improve sustainability data, governance, documentation, reporting processes, and readiness for reliable disclosures.</p>
+                </div>
+                <div class="mt-8 text-xs font-semibold uppercase tracking-widest text-consulting-dark flex items-center gap-2">
+                    <span data-i18n="card_cta">View details</span> &rarr;
+                </div>
+            </a>
+        </div>
+        <div class="mt-10 text-center">
+            <a href="services.html" class="text-xs uppercase tracking-widest font-semibold text-slate-700 hover:text-consulting-dark transition border-b border-slate-300 pb-1" data-i18n="explore_solutions">Explore our solutions &rarr;</a>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white border-y border-consulting-border px-8">
+        <div class="max-w-4xl mx-auto text-center space-y-4">
+            <h2 class="text-3xl md:text-4xl font-editorial font-light text-consulting-dark tracking-tight" data-i18n="frameworks_title">From Complex Frameworks to Practical Strategy</h2>
+            <p class="text-slate-600 font-light text-base leading-relaxed" data-i18n="frameworks_p1">We bridge the gap between complex sustainability standards and business reality.</p>
+            <p class="text-slate-600 font-light text-base leading-relaxed" data-i18n="frameworks_p2">Our team combines technical expertise to help organizations apply GRI, ESRS, the GHG Protocol, SBTi, and IFRS S1 and S2 in a way that is rigorous, actionable, and aligned with long-term business resilience.</p>
+        </div>
+    </section>
+
+    <section class="py-24 px-8 max-w-7xl mx-auto">
+        <div class="max-w-3xl mb-16">
+            <h2 class="text-3xl md:text-4xl font-editorial font-light text-consulting-dark tracking-tight leading-snug" data-i18n="meet_title">We’ll Meet You Where You Are—and Help You Move Forward.</h2>
+            <p class="mt-5 text-slate-600 font-light text-base leading-relaxed" data-i18n="meet_desc">Whether you need support with one specific certification, a defined strategic assessment, or ongoing sustainability advisory, Green On tailors the engagement to your organization’s priorities, capabilities, and stage of development.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div class="p-10 border border-consulting-border rounded-3xl bg-consulting-card flex flex-col justify-between">
+                <div>
+                    <h3 class="text-xl font-editorial text-consulting-dark mb-3" data-i18n="m1_title">Focused Support</h3>
+                    <p class="text-slate-600 text-sm font-light leading-relaxed mb-6" data-i18n="m1_desc">Targeted assistance for a specific need, such as a greenhouse gas inventory, environmental certification, workshop, assessment, or sustainability program.</p>
+                </div>
+                <p class="text-xs font-medium text-consulting-muted border-t border-consulting-border pt-4" data-i18n="m1_best">Best for: Organizations with a clearly defined requirement.</p>
+            </div>
+            <div class="p-10 border border-consulting-border rounded-3xl bg-consulting-card flex flex-col justify-between">
+                <div>
+                    <h3 class="text-xl font-editorial text-consulting-dark mb-3" data-i18n="m2_title">Strategic Projects</h3>
+                    <p class="text-slate-600 text-sm font-light leading-relaxed mb-6" data-i18n="m2_desc">Structured engagements designed to address a specific business challenge, such as climate readiness, double materiality, or a decarbonization roadmap.</p>
+                </div>
+                <p class="text-xs font-medium text-consulting-muted border-t border-consulting-border pt-4" data-i18n="m2_best">Best for: Organizations needing a clear assessment and strategy.</p>
+            </div>
+            <div class="p-10 border border-consulting-border rounded-3xl bg-consulting-card flex flex-col justify-between">
+                <div>
+                    <h3 class="text-xl font-editorial text-consulting-dark mb-3" data-i18n="m3_title">Ongoing Advisory</h3>
+                    <p class="text-slate-600 text-sm font-light leading-relaxed mb-6" data-i18n="m3_desc">Recurring support for sustainability strategy, implementation, certification management, data, reporting readiness, and continuous improvement.</p>
+                </div>
+                <p class="text-xs font-medium text-consulting-muted border-t border-consulting-border pt-4" data-i18n="m3_best">Best for: Organizations seeking long-term guidance.</p>
+            </div>
+        </div>
+        <div class="mt-16 text-center">
+            <a href="contact.html" class="inline-block bg-consulting-dark text-white text-xs uppercase tracking-widest font-semibold px-9 py-4 rounded-full hover:bg-consulting-muted transition shadow-md" data-i18n="discuss_project">
+                Discuss your project &rarr;
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-white border-t border-consulting-border py-16 px-8">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center">
+                <img src="imgs/logoV.png" alt="Get your Green On" class="h-8 w-auto object-contain">
+            </div>
+            <div class="text-xs text-slate-500 font-light" data-i18n="footer_rights">© 2026 Green On. All rights reserved.</div>
+            <div class="text-xs text-slate-600 flex flex-col sm:flex-row items-center gap-4">
+                <span data-i18n="footer_cta_text">Ready to Build a More Resilient Business? Let's talk:</span> <a href="mailto:administracion@letsgetyourgreenon.com" class="font-medium text-consulting-dark hover:underline">administracion@letsgetyourgreenon.com</a>
+                <span>|</span>
+                <span><a href="https://wa.me/50663158782" target="_blank" rel="noopener" class="font-medium text-consulting-dark hover:underline">+506 6315-8782</a> (Alajuela, Costa Rica)</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

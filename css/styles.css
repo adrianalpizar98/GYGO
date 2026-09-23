@@ -1,0 +1,56 @@
+/* ==========================================================================
+   Get your Green On - Corporate Consulting Stylesheet
+   ========================================================================== */
+
+:root {
+    --brand-dark-green: #0F2D24;
+    --brand-cream: #FDFDFC;
+    --brand-dark: #1E293B;
+    --brand-gray: #64748B;
+    --border-color: #E2E8F0;
+}
+
+::selection {
+    background-color: var(--brand-dark-green);
+    color: #ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--brand-cream);
+    color: var(--brand-dark);
+    margin: 0;
+    padding: 0;
+    line-height: 1.7;
+}
+
+h1, h2, .editorial-title {
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+    font-weight: 300;
+    letter-spacing: -0.015em;
+}
+
+.editorial-img {
+    filter: grayscale(100%) contrast(105%);
+    transition: filter 0.6s ease;
+}
+
+.editorial-img:hover {
+    filter: grayscale(0%) contrast(100%);
+}
+
+a, button {
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+details > summary { 
+    list-style: none; 
+}
+
+details > summary::-webkit-details-marker { 
+    display: none; 
+}

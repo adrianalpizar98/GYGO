@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Get your Green On</title>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { editorial: ['Newsreader', 'Georgia', 'serif'] },
+                    colors: { consulting: { dark: '#0F2D24', muted: '#526E65', light: '#FDFDFC', card: '#F8F9F8', border: '#E2E8F0' } }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-consulting-light text-slate-800 antialiased selection:bg-consulting-dark selection:text-white">
+
+    <header class="sticky top-0 z-50 bg-consulting-light/90 backdrop-blur-md border-b border-consulting-border">
+        <div class="max-w-7xl mx-auto px-8 h-28 flex items-center justify-between">
+            <a href="index.html" class="flex items-center">
+                <img src="imgs/logoV.png" alt="Get your Green On" class="h-36 w-auto object-contain py-1">
+            </a>
+            <nav class="hidden md:flex items-center gap-10 text-xs uppercase tracking-widest font-semibold text-slate-600">
+                <a href="index.html" class="hover:text-consulting-dark transition" data-i18n="nav_home">Home</a>
+                <a href="about.html" class="hover:text-consulting-dark transition" data-i18n="nav_about">About Us</a>
+                <a href="services.html" class="hover:text-consulting-dark transition" data-i18n="nav_solutions">Services</a>
+                <a href="contact.html" class="text-consulting-dark transition" data-i18n="nav_contact">Contact</a>
+            </nav>
+            <div class="flex items-center gap-5">
+                <div class="flex items-center text-xs font-medium text-slate-500 border border-consulting-border rounded-full px-2 py-1 bg-white">
+                    <button id="btn-en" onclick="switchLanguage('en')" class="px-2.5 py-0.5 rounded-full bg-consulting-dark text-white transition">ENG</button>
+                    <button id="btn-es" onclick="switchLanguage('es')" class="px-2.5 py-0.5 rounded-full hover:text-consulting-dark transition">ES</button>
+                </div>
+                <a href="https://cal.com/tu-usuario/reunion-estrategica" target="_blank" rel="noopener" class="bg-consulting-dark text-white text-xs uppercase tracking-widest font-semibold px-6 py-3 rounded-full hover:bg-consulting-muted transition shadow-sm" data-i18n="nav_cta">
+                    Schedule a Conversation
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-16 md:py-24 px-8 max-w-4xl mx-auto text-center">
+        <h1 class="text-3xl md:text-5xl font-editorial font-light text-consulting-dark tracking-tight mb-6" data-i18n="contact_main_title">Let's Discuss the Future of Your Organization</h1>
+        <p class="text-slate-600 font-light text-base md:text-lg leading-relaxed mb-12 max-w-2xl mx-auto" data-i18n="contact_main_desc">We are based in Alajuela, Costa Rica. Get in touch directly or schedule a strategic session with our team.</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left max-w-2xl mx-auto mb-12">
+            <div class="bg-white p-8 border border-consulting-border rounded-3xl shadow-sm">
+                <span class="text-xs font-bold text-consulting-muted uppercase tracking-widest block mb-2" data-i18n="email_label">Email Address</span>
+                <a href="mailto:administracion@letsgetyourgreenon.com" class="text-consulting-dark font-medium hover:underline text-sm md:text-base">administracion@letsgetyourgreenon.com</a>
+            </div>
+            <div class="bg-white p-8 border border-consulting-border rounded-3xl shadow-sm">
+                <span class="text-xs font-bold text-consulting-muted uppercase tracking-widest block mb-2" data-i18n="phone_label">Phone / WhatsApp</span>
+                <a href="https://wa.me/50663158782" target="_blank" rel="noopener" class="text-consulting-dark font-medium hover:underline text-sm md:text-base">+506 6315-8782</a>
+            </div>
+        </div>
+
+        <a href="https://cal.com/tu-usuario/reunion-estrategica" target="_blank" rel="noopener" class="inline-block bg-consulting-dark text-white text-xs uppercase tracking-widest font-semibold px-9 py-4 rounded-full hover:bg-consulting-muted transition shadow-md" data-i18n="nav_cta">
+            Schedule a Conversation
+        </a>
+    </section>
+
+    <footer class="bg-white border-t border-consulting-border py-16 px-8">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center">
+                <img src="imgs/logoV.png" alt="Get your Green On" class="h-8 w-auto object-contain">
+            </div>
+            <div class="text-xs text-slate-500 font-light" data-i18n="footer_rights">© 2026 Green On. All rights reserved.</div>
+            <div class="text-xs text-slate-600 flex gap-6">
+                <a href="mailto:administracion@letsgetyourgreenon.com" class="hover:text-consulting-dark transition">administracion@letsgetyourgreenon.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

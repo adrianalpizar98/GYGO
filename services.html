@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Get your Green On</title>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { editorial: ['Newsreader', 'Georgia', 'serif'] },
+                    colors: { consulting: { dark: '#0F2D24', muted: '#526E65', light: '#FDFDFC', card: '#F8F9F8', border: '#E2E8F0' } }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-consulting-light text-slate-800 antialiased selection:bg-consulting-dark selection:text-white">
+
+    <header class="sticky top-0 z-50 bg-consulting-light/90 backdrop-blur-md border-b border-consulting-border">
+        <div class="max-w-7xl mx-auto px-8 h-28 flex items-center justify-between">
+            <a href="index.html" class="flex items-center">
+                <img src="imgs/logoV.png" alt="Get your Green On" class="h-36 w-auto object-contain py-1">
+            </a>
+            <nav class="hidden md:flex items-center gap-10 text-xs uppercase tracking-widest font-semibold text-slate-600">
+                <a href="index.html" class="hover:text-consulting-dark transition" data-i18n="nav_home">Home</a>
+                <a href="about.html" class="hover:text-consulting-dark transition" data-i18n="nav_about">About Us</a>
+                <a href="services.html" class="text-consulting-dark transition" data-i18n="nav_solutions">Services</a>
+                <a href="contact.html" class="hover:text-consulting-dark transition" data-i18n="nav_contact">Contact</a>
+            </nav>
+            <div class="flex items-center gap-5">
+                <div class="flex items-center text-xs font-medium text-slate-500 border border-consulting-border rounded-full px-2 py-1 bg-white">
+                    <button id="btn-en" onclick="switchLanguage('en')" class="px-2.5 py-0.5 rounded-full bg-consulting-dark text-white transition">ENG</button>
+                    <button id="btn-es" onclick="switchLanguage('es')" class="px-2.5 py-0.5 rounded-full hover:text-consulting-dark transition">ES</button>
+                </div>
+                <a href="https://cal.com/tu-usuario/reunion-estrategica" target="_blank" rel="noopener" class="bg-consulting-dark text-white text-xs uppercase tracking-widest font-semibold px-6 py-3 rounded-full hover:bg-consulting-muted transition shadow-sm" data-i18n="nav_cta">
+                    Schedule a Conversation
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-12 md:py-16 px-6 max-w-4xl mx-auto text-center">
+        <h1 class="text-3xl md:text-5xl font-editorial font-light text-consulting-dark tracking-tight mb-4" data-i18n="serv_main_title">Our Comprehensive Services</h1>
+        <p class="text-slate-600 font-light text-base md:text-lg leading-relaxed max-w-2xl mx-auto" data-i18n="serv_main_desc">We support organizations at every stage of their sustainability journey with absolute technical rigor.</p>
+    </section>
+
+    <!-- Contenido Detallado y Exhaustivo en Acordeones -->
+    <section class="py-8 px-8 max-w-5xl mx-auto space-y-10 mb-24">
+        
+        <!-- Servicio 1 -->
+        <div class="bg-white p-10 border border-consulting-border rounded-3xl shadow-sm space-y-6">
+            <span class="text-xs font-mono text-consulting-muted block">01</span>
+            <h3 class="text-2xl font-editorial font-normal text-consulting-dark leading-snug" data-i18n="s1_title">Sustainability, Reporting & Readiness Assessment</h3>
+            <p class="text-slate-600 text-base font-light leading-relaxed" data-i18n="s1_desc">Understand where your organization currently stands and what it needs to move forward. We assess your existing practices, data, documentation and internal capabilities to identify gaps, risks and opportunities across key sustainability areas.</p>
+            
+            <details class="group pt-4 border-t border-consulting-border">
+                <summary class="flex justify-between items-center cursor-pointer text-xs font-bold text-consulting-dark uppercase tracking-widest hover:text-consulting-muted transition">
+                    <span data-i18n="s1_sum_label">Services & Deliverables included (+)</span>
+                    <span class="transition group-open:rotate-180">&darr;</span>
+                </summary>
+                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-600 font-light pt-6" data-i18n="s1_list">
+                    <li>• Sustainability baseline assessments.</li>
+                    <li>• Carbon footprint and GHG inventory readiness assessments.</li>
+                    <li>• Materiality and double materiality assessments.</li>
+                    <li>• Climate risk and resilience assessments.</li>
+                    <li>• IFRS S1 and IFRS S2 readiness assessments.</li>
+                    <li>• Reporting readiness assessments.</li>
+                    <li>• Sustainability data and documentation gap analysis.</li>
+                    <li>• Governance, roles and internal capacity assessments.</li>
+                    <li>• Certification and environmental program readiness.</li>
+                    <li>• Waste, water, energy and resource efficiency diagnostics.</li>
+                    <li>• Sustainable procurement and supply chain assessments.</li>
+                    <li>• Recommendations and prioritized action plans.</li>
+                </ul>
+            </details>
+        </div>
+
+        <!-- Servicio 2 -->
+        <div class="bg-white p-10 border border-consulting-border rounded-3xl shadow-sm space-y-6">
+            <span class="text-xs font-mono text-consulting-muted block">02</span>
+            <h3 class="text-2xl font-editorial font-normal text-consulting-dark leading-snug" data-i18n="s2_title">Sustainability Strategy & Roadmap</h3>
+            <p class="text-slate-600 text-base font-light leading-relaxed" data-i18n="s2_desc">Transform sustainability goals into a practical and achievable plan. We help organizations define priorities, objectives, responsibilities, indicators and implementation timelines that connect sustainability initiatives with business needs.</p>
+            
+            <details class="group pt-4 border-t border-consulting-border">
+                <summary class="flex justify-between items-center cursor-pointer text-xs font-bold text-consulting-dark uppercase tracking-widest hover:text-consulting-muted transition">
+                    <span data-i18n="s2_sum_label">Services & Deliverables included (+)</span>
+                    <span class="transition group-open:rotate-180">&darr;</span>
+                </summary>
+                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-600 font-light pt-6" data-i18n="s2_list">
+                    <li>• Corporate sustainability strategies.</li>
+                    <li>• Climate resilience and adaptation strategies.</li>
+                    <li>• Decarbonization strategies and Carbon Management Plans.</li>
+                    <li>• SBTi emissions reduction roadmaps.</li>
+                    <li>• Circular economy strategies and waste reduction plans.</li>
+                    <li>• Sustainable procurement and mobility strategies.</li>
+                    <li>• Water and energy efficiency roadmaps.</li>
+                    <li>• Biodiversity and nature-related action plans.</li>
+                    <li>• Sustainability governance models and ESG objectives.</li>
+                    <li>• Short-, medium- and long-term sustainability roadmaps.</li>
+                </ul>
+            </details>
+        </div>
+
+        <!-- Servicio 3 -->
+        <div class="bg-white p-10 border border-consulting-border rounded-3xl shadow-sm space-y-6">
+            <span class="text-xs font-mono text-consulting-muted block">03</span>
+            <h3 class="text-2xl font-editorial font-normal text-consulting-dark leading-snug" data-i18n="s3_title">Sustainability Reporting & Disclosure</h3>
+            <p class="text-slate-600 text-base font-light leading-relaxed" data-i18n="s3_desc">Communicate your sustainability performance with clarity, credibility and purpose. We support organizations in collecting and organizing information, defining indicators and developing reports that respond to stakeholder expectations.</p>
+            
+            <details class="group pt-4 border-t border-consulting-border">
+                <summary class="flex justify-between items-center cursor-pointer text-xs font-bold text-consulting-dark uppercase tracking-widest hover:text-consulting-muted transition">
+                    <span data-i18n="s3_sum_label">Services & Deliverables included (+)</span>
+                    <span class="transition group-open:rotate-180">&darr;</span>
+                </summary>
+                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-600 font-light pt-6" data-i18n="s3_list">
+                    <li>• GRI-aligned and ESRS-aligned sustainability reports.</li>
+                    <li>• IFRS S1 and IFRS S2 disclosure support.</li>
+                    <li>• Carbon footprint and emissions reports.</li>
+                    <li>• ESG indicator frameworks and data consolidation.</li>
+                    <li>• Stakeholder and materiality information integration.</li>
+                    <li>• Report content development and technical writing.</li>
+                    <li>• Customized reports for clients, investors or internal teams.</li>
+                </ul>
+            </details>
+        </div>
+
+        <!-- Servicio 4 -->
+        <div class="bg-white p-10 border border-consulting-border rounded-3xl shadow-sm space-y-6">
+            <span class="text-xs font-mono text-consulting-muted block">04</span>
+            <h3 class="text-2xl font-editorial font-normal text-consulting-dark leading-snug" data-i18n="s4_title">Certifications & Environmental Programs</h3>
+            <p class="text-slate-600 text-base font-light leading-relaxed" data-i18n="s4_desc">Move from commitments to implementation. We guide organizations through the development, documentation and management of sustainability certifications and environmental recognitions.</p>
+            
+            <details class="group pt-4 border-t border-consulting-border">
+                <summary class="flex justify-between items-center cursor-pointer text-xs font-bold text-consulting-dark uppercase tracking-widest hover:text-consulting-muted transition">
+                    <span data-i18n="s4_sum_label">Programs & Recognitions included (+)</span>
+                    <span class="transition group-open:rotate-180">&darr;</span>
+                </summary>
+                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-600 font-light pt-6" data-i18n="s4_list">
+                    <li>• Programa País Carbono Neutralidad 2.0 (PCCN).</li>
+                    <li>• Bandera Azul Ecológica (PBAE).</li>
+                    <li>• Esencial Costa Rica.</li>
+                    <li>• Greenhouse gas inventories and reduction programs.</li>
+                    <li>• Water, energy and waste management efficiency programs.</li>
+                    <li>• Biodiversity conservation and environmental education.</li>
+                    <li>• Preparation for audits, evaluations and verification processes.</li>
+                </ul>
+            </details>
+        </div>
+
+        <!-- Servicio 5: Training -->
+        <div class="bg-white p-10 border border-consulting-border rounded-3xl shadow-sm space-y-6">
+            <span class="text-xs font-mono text-consulting-muted block">05</span>
+            <h3 class="text-2xl font-editorial font-normal text-consulting-dark leading-snug" data-i18n="s5_title">Custom Training & Workshops</h3>
+            <p class="text-slate-600 text-base font-light leading-relaxed" data-i18n="s5_desc">Build sustainability knowledge, engagement and practical capabilities across your organization. Delivered virtually or in person with practical business cases.</p>
+            
+            <details class="group pt-4 border-t border-consulting-border">
+                <summary class="flex justify-between items-center cursor-pointer text-xs font-bold text-consulting-dark uppercase tracking-widest hover:text-consulting-muted transition">
+                    <span data-i18n="s5_sum_label">Training topics included (+)</span>
+                    <span class="transition group-open:rotate-180">&darr;</span>
+                </summary>
+                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-600 font-light pt-6" data-i18n="s5_list">
+                    <li>• Double materiality workshops.</li>
+                    <li>• Value chain assessment workshops.</li>
+                    <li>• How to develop a sustainability report.</li>
+                    <li>• Carbon footprint and emissions basics.</li>
+                    <li>• Supplier engagement and sustainable procurement.</li>
+                </ul>
+            </details>
+        </div>
+
+        <!-- Servicio 6: Tools -->
+        <div class="bg-white p-10 border border-consulting-border rounded-3xl shadow-sm space-y-6">
+            <span class="text-xs font-mono text-consulting-muted block">06</span>
+            <h3 class="text-2xl font-editorial font-normal text-consulting-dark leading-snug" data-i18n="s6_title">Custom Sustainability Tools & Resources</h3>
+            <p class="text-slate-600 text-base font-light leading-relaxed" data-i18n="s6_desc">Turn complex sustainability requirements into practical and easy-to-use solutions. We design customized tools, templates and resources that help organizations manage data efficiently.</p>
+            
+            <details class="group pt-4 border-t border-consulting-border">
+                <summary class="flex justify-between items-center cursor-pointer text-xs font-bold text-consulting-dark uppercase tracking-widest hover:text-consulting-muted transition">
+                    <span data-i18n="s6_sum_label">Tools included (+)</span>
+                    <span class="transition group-open:rotate-180">&darr;</span>
+                </summary>
+                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-600 font-light pt-6" data-i18n="s6_list">
+                    <li>• Waste management program guides.</li>
+                    <li>• Emissions data collection templates.</li>
+                    <li>• Supplier sustainability evaluation templates.</li>
+                    <li>• Greenhouse gas inventory support templates.</li>
+                    <li>• Reporting and disclosure preparation checklists.</li>
+                </ul>
+            </details>
+        </div>
+
+        <!-- Programa Estrella: Sustainability Foundations Program -->
+        <div class="bg-consulting-card p-12 border-2 border-consulting-dark rounded-3xl shadow-md space-y-6">
+            <span class="text-xs font-bold text-consulting-muted uppercase tracking-widest block" data-i18n="star_tag">Star Package</span>
+            <h3 class="text-3xl font-editorial font-light text-consulting-dark leading-snug" data-i18n="star_title">Sustainability Foundations Program</h3>
+            <p class="text-slate-700 text-base font-light leading-relaxed" data-i18n="star_desc">Build a strong and credible sustainability foundation through one integrated program. We combine sustainability strategy with the implementation of Carbon Neutrality, Bandera Azul Ecológica and Esencial Costa Rica, ensuring a coherent business vision and long-term resilience.</p>
+        </div>
+
+        <!-- Banner de conversión -->
+        <div class="bg-consulting-dark text-white p-12 rounded-3xl text-center shadow-xl">
+            <h3 class="text-3xl font-editorial font-light mb-4" data-i18n="serv_cta_title">Need a tailored service for your company?</h3>
+            <p class="text-slate-300 text-sm font-light mb-8 max-w-xl mx-auto leading-relaxed" data-i18n="serv_cta_desc">Let's discuss your technical needs and design the right pathway.</p>
+            <a href="https://cal.com/tu-usuario/reunion-estrategica" target="_blank" rel="noopener" class="inline-block bg-white text-consulting-dark text-xs uppercase tracking-widest font-semibold px-8 py-3.5 rounded-full hover:bg-slate-100 transition shadow-md" data-i18n="nav_cta">
+                Schedule a Conversation
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-white border-t border-consulting-border py-16 px-8">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center">
+                <img src="imgs/logoV.png" alt="Get your Green On" class="h-8 w-auto object-contain">
+            </div>
+            <div class="text-xs text-slate-500 font-light" data-i18n="footer_rights">© 2026 Green On. All rights reserved.</div>
+            <div class="text-xs text-slate-600 flex gap-6">
+                <a href="mailto:administracion@letsgetyourgreenon.com" class="hover:text-consulting-dark transition">administracion@letsgetyourgreenon.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Get your Green On</title>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { editorial: ['Newsreader', 'Georgia', 'serif'] },
+                    colors: { consulting: { dark: '#0F2D24', muted: '#526E65', light: '#FDFDFC', card: '#F8F9F8', border: '#E2E8F0' } }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-consulting-light text-slate-800 antialiased selection:bg-consulting-dark selection:text-white">
+
+    <header class="sticky top-0 z-50 bg-consulting-light/90 backdrop-blur-md border-b border-consulting-border">
+        <div class="max-w-7xl mx-auto px-8 h-28 flex items-center justify-between">
+            <a href="index.html" class="flex items-center">
+                <img src="imgs/logoV.png" alt="Get your Green On" class="h-36 w-auto object-contain py-1">
+            </a>
+            <nav class="hidden md:flex items-center gap-10 text-xs uppercase tracking-widest font-semibold text-slate-600">
+                <a href="index.html" class="hover:text-consulting-dark transition" data-i18n="nav_home">Home</a>
+                <a href="about.html" class="text-consulting-dark transition" data-i18n="nav_about">About Us</a>
+                <a href="services.html" class="hover:text-consulting-dark transition" data-i18n="nav_solutions">Services</a>
+                <a href="contact.html" class="hover:text-consulting-dark transition" data-i18n="nav_contact">Contact</a>
+            </nav>
+            <div class="flex items-center gap-5">
+                <div class="flex items-center text-xs font-medium text-slate-500 border border-consulting-border rounded-full px-2 py-1 bg-white">
+                    <button id="btn-en" onclick="switchLanguage('en')" class="px-2.5 py-0.5 rounded-full bg-consulting-dark text-white transition">ENG</button>
+                    <button id="btn-es" onclick="switchLanguage('es')" class="px-2.5 py-0.5 rounded-full hover:text-consulting-dark transition">ES</button>
+                </div>
+                <a href="https://cal.com/tu-usuario/reunion-estrategica" target="_blank" rel="noopener" class="bg-consulting-dark text-white text-xs uppercase tracking-widest font-semibold px-6 py-3 rounded-full hover:bg-consulting-muted transition shadow-sm" data-i18n="nav_cta">
+                    Schedule a Conversation
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Misión -->
+    <section class="py-12 md:py-16 px-8 max-w-5xl mx-auto text-center">
+        <h1 class="text-3xl md:text-5xl font-editorial font-light text-consulting-dark tracking-tight leading-snug mb-6" data-i18n="mission_title">
+            Our mission is to help organizations move from sustainability commitments to resilient business strategy.
+        </h1>
+        <p class="text-slate-600 font-light text-base md:text-lg leading-relaxed max-w-3xl mx-auto" data-i18n="mission_desc">
+            We provide the technical guidance, strategic perspective, and implementation support needed to transform climate and environmental challenges into clear priorities, practical action plans, and long-term business value.
+        </p>
+    </section>
+
+    <!-- Equipo Asesor con fotografías oficiales -->
+    <section class="py-20 bg-white border-y border-consulting-border px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-editorial font-light text-consulting-dark tracking-tight mb-4" data-i18n="team_title">Our Advisory Team</h2>
+                <p class="text-slate-600 font-light text-sm md:text-base leading-relaxed" data-i18n="team_subtitle">Green On is led by a multidisciplinary advisory team that combines sustainability strategy, environmental management, project execution, and corporate experience.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="bg-consulting-card p-10 border border-consulting-border rounded-3xl flex flex-col items-center text-center">
+                    <div class="w-32 h-32 rounded-full overflow-hidden bg-slate-300 mb-6 border-2 border-consulting-border shadow-inner">
+                        <img src="imgs/fabi.jpg" alt="Fabiola Araya May" class="w-full h-full object-cover editorial-img">
+                    </div>
+                    <h3 class="text-2xl font-editorial text-consulting-dark mb-1">Fabiola Araya May</h3>
+                    <p class="text-xs font-bold text-consulting-muted uppercase tracking-widest mb-4" data-i18n="fab_role">Co-founder & Director</p>
+                    <p class="text-slate-600 text-sm font-light leading-relaxed" data-i18n="fab_desc">Fabiola is a biologist specializing in ecology and sustainable development, with 10+ years of expertise in consulting, corporate strategy, and environmental project management.</p>
+                </div>
+                <div class="bg-consulting-card p-10 border border-consulting-border rounded-3xl flex flex-col items-center text-center">
+                    <div class="w-32 h-32 rounded-full overflow-hidden bg-slate-300 mb-6 border-2 border-consulting-border shadow-inner">
+                        <img src="imgs/mendez.jpg" alt="Armando Méndez Rodríguez" class="w-full h-full object-cover editorial-img">
+                    </div>
+                    <h3 class="text-2xl font-editorial text-consulting-dark mb-1">Armando Méndez Rodríguez</h3>
+                    <p class="text-xs font-bold text-consulting-muted uppercase tracking-widest mb-4" data-i18n="arm_role">Co-founder & Senior Consultant</p>
+                    <p class="text-slate-600 text-sm font-light leading-relaxed" data-i18n="arm_desc">Armando is a biologist with 8+ years of experience in environmental management, biodiversity, and waste management. He leads implementation of practical programs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What Makes Green On Different -->
+    <section class="py-24 px-8 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl md:text-4xl font-editorial font-light text-consulting-dark tracking-tight" data-i18n="diff_main_title">What Makes Green On Different</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div class="p-10 border border-consulting-border rounded-3xl bg-white shadow-sm flex flex-col justify-between">
+                <div>
+                    <h3 class="text-xl font-editorial text-consulting-dark mb-4" data-i18n="diff_1_title">Strategy grounded in implementation</h3>
+                    <p class="text-slate-600 text-sm font-light leading-relaxed" data-i18n="diff_1_desc">We don’t just deliver reports; we design strategies that can actually be executed. Our background in project management and operations means we understand the internal challenges of change management, resource allocation, and technical feasibility.</p>
+                </div>
+            </div>
+            <div class="p-10 border border-consulting-border rounded-3xl bg-white shadow-sm flex flex-col justify-between">
+                <div>
+                    <h3 class="text-xl font-editorial text-consulting-dark mb-4" data-i18n="diff_2_title">Technical expertise with business context</h3>
+                    <p class="text-slate-600 text-sm font-light leading-relaxed" data-i18n="diff_2_desc">We bridge the gap between complex environmental data and business decision-making. We translate emissions factors, regulatory requirements, and technical standards into clear priorities and business opportunities.</p>
+                </div>
+            </div>
+            <div class="p-10 border border-consulting-border rounded-3xl bg-white shadow-sm flex flex-col justify-between">
+                <div>
+                    <h3 class="text-xl font-editorial text-consulting-dark mb-4" data-i18n="diff_3_title">Flexible support</h3>
+                    <p class="text-slate-600 text-sm font-light leading-relaxed" data-i18n="diff_3_desc">Every organization is at a different stage. We offer modular advisory that adapts to your needs—whether you need a full carbon strategy, support for a specific disclosure report, or technical guidance for an environmental program.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA en About -->
+    <section class="py-20 bg-consulting-card border-t border-consulting-border px-8 text-center space-y-6">
+        <h2 class="text-3xl font-editorial font-light text-consulting-dark" data-i18n="about_cta_title">Would you like to know more about how we work?</h2>
+        <a href="https://cal.com/tu-usuario/reunion-estrategica" target="_blank" rel="noopener" class="inline-block bg-consulting-dark text-white text-xs uppercase tracking-widest font-semibold px-8 py-3.5 rounded-full hover:bg-consulting-muted transition shadow-md" data-i18n="nav_cta">
+            Schedule a Conversation
+        </a>
+    </section>
+
+    <footer class="bg-white border-t border-consulting-border py-16 px-8">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center">
+                <img src="imgs/logoV.png" alt="Get your Green On" class="h-8 w-auto object-contain">
+            </div>
+            <div class="text-xs text-slate-500 font-light" data-i18n="footer_rights">© 2026 Green On. All rights reserved.</div>
+            <div class="text-xs text-slate-600 flex gap-6">
+                <a href="mailto:administracion@letsgetyourgreenon.com" class="hover:text-consulting-dark transition">administracion@letsgetyourgreenon.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
